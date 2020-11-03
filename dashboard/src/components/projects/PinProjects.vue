@@ -14,7 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 <template>
-    <b-modal id="searchProjectsModal" title="Pin Projects" v-model="show" :no-close-on-backdrop="true" size="lg"
+    <b-modal id="searchProjectsModal" title="Pin Projects" v-model="show" :no-close-on-backdrop="true"
            @close="done" header-bg-variant="info" header-text-variant="light" no-fade body-class="px-0 mx-0">
       <b-container fluid class="px-0" data-cy="pinProjects">
         <b-row class="px-3">
@@ -23,7 +23,7 @@ limitations under the License.
               <template #append>
                 <b-button variant="outline-secondary" @click="searchValue=''" data-cy="pinProjectsClearSearch"><i class="fas fa-times"></i></b-button>
               </template>
-              <b-input v-model="searchValue" placeholder="Search projects to pin" data-cy="pinProjectsSearchInput"></b-input>
+              <b-input v-model="searchValue" placeholder="Search projects to pin" data-cy="pinProjectsSearchInput" aria-label="search for projects to pin"></b-input>
             </b-input-group>
           </b-col>
           <b-col cols="12" sm="auto" class="pt-sm-2 text-center">
